@@ -1,0 +1,24 @@
+name: "Ubuntu to Homebrew"
+description: "Test registry for Ubuntu to Homebrew mappings"
+version: "1.0"
+mappings:
+  git:
+    target_pm: "brew"
+    target_name: "git"
+    confidence: 0.95
+    reason: "Direct mapping"
+    post_install: []
+  vim:
+    target_pm: "brew"
+    target_name: "vim"
+    confidence: 0.9
+    reason: "Direct mapping"
+    post_install: []
+  code:
+    target_pm: "cask"
+    target_name: "visual-studio-code"
+    confidence: 0.8
+    reason: "Direct mapping"
+    post_install: []
+aliases:
+  vscode: "code"

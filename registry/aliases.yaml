@@ -1,0 +1,197 @@
+# Package name aliases for Packster
+# Maps common variations to canonical names
+
+# Ubuntu/Debian package name variations
+aliases:
+  # fd-find is the Ubuntu package name for fd
+  fd-find: fd
+  
+  # python3-pip suggests Python 3 installation
+  python3-pip: python3
+  
+  # gnome-terminal maps to iTerm2 on macOS
+  gnome-terminal: iterm2
+  
+  # docker.io is the Ubuntu package name for Docker
+  docker.io: docker
+  
+  # Common library variations
+  libssl-dev: openssl
+  libffi-dev: libffi
+  libreadline-dev: readline
+  libsqlite3-dev: sqlite
+  libbz2-dev: bzip2
+  liblzma-dev: xz
+  libncurses5-dev: ncurses
+  libncursesw5-dev: ncurses
+  
+  # Development package variations
+  python3-dev: python3
+  nodejs-dev: nodejs
+  ruby-dev: ruby
+  
+  # Binary package variations
+  python3-pip: python3
+  python3-venv: python3
+  python3-distutils: python3
+  
+  # Network tool variations
+  netcat-openbsd: netcat
+  netcat-traditional: netcat
+  
+  # Archive tool variations
+  unzip: unzip
+  zip: zip
+  tar: tar
+  
+  # Text processing variations
+  grep: grep
+  sed: sed
+  awk: awk
+  
+  # Version control variations
+  git-core: git
+  subversion: subversion
+  mercurial: mercurial
+  
+  # Build tool variations
+  build-essential: make
+  cmake: cmake
+  autoconf: autoconf
+  automake: automake
+  libtool: libtool
+  pkg-config: pkg-config
+  
+  # Language runtime variations
+  python3: python3
+  nodejs: nodejs
+  node: nodejs
+  golang-go: go
+  rustc: rust
+  cargo: rust
+  ruby: ruby
+  ruby-full: ruby
+  
+  # Database variations
+  postgresql-client: postgresql
+  postgresql-server: postgresql
+  mysql-client: mysql
+  mysql-server: mysql
+  sqlite3: sqlite3
+  redis-server: redis
+  redis-tools: redis
+  
+  # Container variations
+  docker-ce: docker
+  docker-ee: docker
+  containerd: docker
+  kubernetes-cli: kubectl
+  
+  # Cloud CLI variations
+  awscli: awscli
+  terraform: terraform
+  google-cloud-sdk: gcloud
+  azure-cli: az
+  doctl: doctl
+  
+  # Utility variations
+  curl: curl
+  wget: wget
+  jq: jq
+  ripgrep: ripgrep
+  fd: fd
+  bat: bat
+  eza: eza
+  fzf: fzf
+  htop: htop
+  tree: tree
+  tmux: tmux
+  vim: vim
+  neovim: neovim
+  
+  # Compression variations
+  gzip: gzip
+  bzip2: bzip2
+  xz-utils: xz
+  zstd: zstd
+  unzip: unzip
+  zip: zip
+  
+  # Network variations
+  nmap: nmap
+  httpie: httpie
+  rsync: rsync
+  ncdu: ncdu
+  parallel: parallel
+  watch: watch
+  
+  # System monitoring variations
+  htop: htop
+  glances: glances
+  iotop: iotop
+  nethogs: nethogs
+  
+  # Development library variations
+  openssl: openssl
+  zlib1g: zlib
+  libssl-dev: openssl
+  libffi-dev: libffi
+  libreadline-dev: readline
+  libsqlite3-dev: sqlite
+  libbz2-dev: bzip2
+  liblzma-dev: xz
+  libncurses5-dev: ncurses
+  libncursesw5-dev: ncurses
+  libpcre3-dev: pcre
+  libxml2-dev: libxml2
+  libxslt1-dev: libxslt
+  libyaml-dev: libyaml
+  libgdbm-dev: gdbm
+  libgmp-dev: gmp
+  libmpfr-dev: mpfr
+  libmpc-dev: mpc
+  
+  # GUI application variations
+  gnome-terminal: iterm2
+  xterm: iterm2
+  konsole: iterm2
+  lxterminal: iterm2
+  mate-terminal: iterm2
+  xfce4-terminal: iterm2
+  
+  # Browser variations
+  firefox-esr: firefox
+  google-chrome-stable: google-chrome
+  chromium-browser: chromium
+  
+  # Editor variations
+  code: visual-studio-code
+  vscode: visual-studio-code
+  atom: atom
+  sublime-text: sublime-text
+  
+  # Communication variations
+  slack-desktop: slack
+  discord-canary: discord
+  telegram-desktop: telegram
+  
+  # Media variations
+  spotify-client: spotify
+  vlc: vlc
+  mpv: mpv
+  ffmpeg: ffmpeg
+  
+  # Additional utilities
+  aria2: aria2
+  sevenzip: 7zip
+  protobuf-compiler: protobuf
+  grpcurl: grpcurl
+  yq: yq
+  kubectl: kubectl
+  helm: helm
+  minikube: minikube
+  kind: kind
+  docker-compose: docker-compose
+  podman: podman
+  buildah: buildah
+  skopeo: skopeo

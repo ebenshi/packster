@@ -1,0 +1,518 @@
+name: "Ubuntu to Homebrew Registry"
+description: "Package mappings from Ubuntu/Debian to Homebrew"
+version: "1.0"
+
+# Common name aliases
+aliases:
+  fd-find: fd
+  python3-pip: python3
+  gnome-terminal: iterm2
+  docker.io: docker
+
+# Package mappings
+mappings:
+  # Development tools
+  git:
+    target_pm: brew
+    target_name: git
+    confidence: 0.95
+    reason: "Git version control system"
+  
+  vim:
+    target_pm: brew
+    target_name: vim
+    confidence: 0.95
+    reason: "Vim text editor"
+  
+  neovim:
+    target_pm: brew
+    target_name: neovim
+    confidence: 0.95
+    reason: "Neovim text editor"
+  
+  tmux:
+    target_pm: brew
+    target_name: tmux
+    confidence: 0.95
+    reason: "Terminal multiplexer"
+  
+  htop:
+    target_pm: brew
+    target_name: htop
+    confidence: 0.95
+    reason: "Interactive process viewer"
+  
+  tree:
+    target_pm: brew
+    target_name: tree
+    confidence: 0.95
+    reason: "Directory tree listing"
+  
+  cmake:
+    target_pm: brew
+    target_name: cmake
+    confidence: 0.95
+    reason: "Cross-platform build system"
+  
+  make:
+    target_pm: brew
+    target_name: make
+    confidence: 0.95
+    reason: "Build automation tool"
+  
+  pkg-config:
+    target_pm: brew
+    target_name: pkg-config
+    confidence: 0.95
+    reason: "Package configuration helper"
+  
+  autoconf:
+    target_pm: brew
+    target_name: autoconf
+    confidence: 0.95
+    reason: "Automatic configure script builder"
+  
+  automake:
+    target_pm: brew
+    target_name: automake
+    confidence: 0.95
+    reason: "Automatic Makefile builder"
+  
+  # Utilities
+  curl:
+    target_pm: brew
+    target_name: curl
+    confidence: 0.95
+    reason: "Command line tool for transferring data"
+  
+  wget:
+    target_pm: brew
+    target_name: wget
+    confidence: 0.95
+    reason: "Internet file retriever"
+  
+  jq:
+    target_pm: brew
+    target_name: jq
+    confidence: 0.95
+    reason: "Command-line JSON processor"
+  
+  ripgrep:
+    target_pm: brew
+    target_name: ripgrep
+    confidence: 0.95
+    reason: "Fast line-oriented regex search"
+  
+  fd:
+    target_pm: brew
+    target_name: fd
+    confidence: 0.95
+    reason: "Simple, fast and user-friendly alternative to find"
+  
+  bat:
+    target_pm: brew
+    target_name: bat
+    confidence: 0.95
+    reason: "A cat(1) clone with syntax highlighting"
+  
+  eza:
+    target_pm: brew
+    target_name: eza
+    confidence: 0.95
+    reason: "Modern replacement for ls"
+  
+  fzf:
+    target_pm: brew
+    target_name: fzf
+    confidence: 0.95
+    reason: "Fuzzy finder"
+  
+  unzip:
+    target_pm: brew
+    target_name: unzip
+    confidence: 0.95
+    reason: "Extraction utility for .zip compressed archives"
+  
+  zip:
+    target_pm: brew
+    target_name: zip
+    confidence: 0.95
+    reason: "Compression and file packaging utility"
+  
+  tar:
+    target_pm: brew
+    target_name: gnu-tar
+    confidence: 0.95
+    reason: "GNU version of the tar archiving utility"
+  
+  gzip:
+    target_pm: brew
+    target_name: gzip
+    confidence: 0.95
+    reason: "GNU compression utility"
+  
+  bzip2:
+    target_pm: brew
+    target_name: bzip2
+    confidence: 0.95
+    reason: "High-quality block-sorting file compressor"
+  
+  xz:
+    target_pm: brew
+    target_name: xz
+    confidence: 0.95
+    reason: "General-purpose data compression"
+  
+  zstd:
+    target_pm: brew
+    target_name: zstd
+    confidence: 0.95
+    reason: "Zstandard - Fast real-time compression algorithm"
+  
+  rsync:
+    target_pm: brew
+    target_name: rsync
+    confidence: 0.95
+    reason: "Fast, versatile, remote (and local) file-copying tool"
+  
+  ncdu:
+    target_pm: brew
+    target_name: ncdu
+    confidence: 0.95
+    reason: "NCurses Disk Usage"
+  
+  httpie:
+    target_pm: brew
+    target_name: httpie
+    confidence: 0.95
+    reason: "User-friendly command-line HTTP client"
+  
+  nmap:
+    target_pm: brew
+    target_name: nmap
+    confidence: 0.95
+    reason: "Network exploration tool and security scanner"
+  
+  watch:
+    target_pm: brew
+    target_name: watch
+    confidence: 0.95
+    reason: "Execute a program periodically"
+  
+  parallel:
+    target_pm: brew
+    target_name: parallel
+    confidence: 0.95
+    reason: "GNU parallel shell tool"
+  
+  # Languages and runtimes
+  python3:
+    target_pm: brew
+    target_name: python@3.12
+    confidence: 0.9
+    reason: "Python 3 programming language"
+  
+  nodejs:
+    target_pm: brew
+    target_name: node
+    confidence: 0.9
+    reason: "Node.js JavaScript runtime"
+  
+  go:
+    target_pm: brew
+    target_name: go
+    confidence: 0.9
+    reason: "Go programming language"
+  
+  rust:
+    target_pm: brew
+    target_name: rust
+    confidence: 0.9
+    reason: "Rust programming language"
+  
+  ruby:
+    target_pm: brew
+    target_name: ruby
+    confidence: 0.9
+    reason: "Ruby programming language"
+  
+  java:
+    target_pm: brew
+    target_name: openjdk@17
+    confidence: 0.8
+    reason: "OpenJDK Java Development Kit"
+  
+  # Build tools
+  maven:
+    target_pm: brew
+    target_name: maven
+    confidence: 0.9
+    reason: "Apache Maven build tool"
+  
+  gradle:
+    target_pm: brew
+    target_name: gradle
+    confidence: 0.9
+    reason: "Gradle build system"
+  
+  sbt:
+    target_pm: brew
+    target_name: sbt
+    confidence: 0.9
+    reason: "Scala Build Tool"
+  
+  # Databases
+  postgresql:
+    target_pm: brew
+    target_name: postgresql@15
+    confidence: 0.9
+    reason: "PostgreSQL database server"
+  
+  mysql:
+    target_pm: brew
+    target_name: mysql
+    confidence: 0.9
+    reason: "MySQL database server"
+  
+  sqlite3:
+    target_pm: brew
+    target_name: sqlite
+    confidence: 0.9
+    reason: "SQLite database engine"
+  
+  redis:
+    target_pm: brew
+    target_name: redis
+    confidence: 0.9
+    reason: "Redis in-memory data structure store"
+  
+  mongodb:
+    target_pm: brew
+    target_name: mongodb/brew/mongodb-community
+    confidence: 0.8
+    reason: "MongoDB document database"
+  
+  # Containers and orchestration
+  docker:
+    target_pm: cask
+    target_name: docker
+    confidence: 0.9
+    reason: "Docker Desktop for macOS"
+  
+  kubernetes-cli:
+    target_pm: brew
+    target_name: kubectl
+    confidence: 0.9
+    reason: "Kubernetes command-line tool"
+  
+  helm:
+    target_pm: brew
+    target_name: helm
+    confidence: 0.9
+    reason: "Kubernetes package manager"
+  
+  minikube:
+    target_pm: brew
+    target_name: minikube
+    confidence: 0.9
+    reason: "Local Kubernetes cluster"
+  
+  kind:
+    target_pm: brew
+    target_name: kind
+    confidence: 0.9
+    reason: "Kubernetes IN Docker"
+  
+  # Cloud tools
+  awscli:
+    target_pm: brew
+    target_name: awscli
+    confidence: 0.9
+    reason: "Amazon Web Services CLI"
+  
+  terraform:
+    target_pm: brew
+    target_name: terraform
+    confidence: 0.9
+    reason: "Terraform infrastructure as code"
+  
+  gcloud:
+    target_pm: brew
+    target_name: google-cloud-sdk
+    confidence: 0.9
+    reason: "Google Cloud SDK"
+  
+  az:
+    target_pm: brew
+    target_name: azure-cli
+    confidence: 0.9
+    reason: "Microsoft Azure CLI"
+  
+  doctl:
+    target_pm: brew
+    target_name: doctl
+    confidence: 0.9
+    reason: "DigitalOcean command-line interface"
+  
+  # Development libraries
+  openssl:
+    target_pm: brew
+    target_name: openssl@3
+    confidence: 0.9
+    reason: "OpenSSL cryptography library"
+  
+  zlib1g:
+    target_pm: brew
+    target_name: zlib
+    confidence: 0.9
+    reason: "Data compression library"
+  
+  libssl-dev:
+    target_pm: brew
+    target_name: openssl@3
+    confidence: 0.8
+    reason: "OpenSSL development headers"
+  
+  libffi-dev:
+    target_pm: brew
+    target_name: libffi
+    confidence: 0.8
+    reason: "Foreign Function Interface library"
+  
+  # Additional utilities
+  aria2:
+    target_pm: brew
+    target_name: aria2
+    confidence: 0.9
+    reason: "Multi-threaded download utility"
+  
+  sevenzip:
+    target_pm: brew
+    target_name: 7zip
+    confidence: 0.9
+    reason: "7-Zip compression utility"
+  
+  protobuf:
+    target_pm: brew
+    target_name: protobuf
+    confidence: 0.9
+    reason: "Protocol Buffers"
+  
+  grpcurl:
+    target_pm: brew
+    target_name: grpcurl
+    confidence: 0.9
+    reason: "gRPC command line tool"
+  
+  yq:
+    target_pm: brew
+    target_name: yq
+    confidence: 0.9
+    reason: "YAML processor"
+  
+  # GUI applications (casks)
+  iterm2:
+    target_pm: cask
+    target_name: iterm2
+    confidence: 0.9
+    reason: "Terminal emulator for macOS"
+  
+  visual-studio-code:
+    target_pm: cask
+    target_name: visual-studio-code
+    confidence: 0.9
+    reason: "Visual Studio Code editor"
+  
+  slack:
+    target_pm: cask
+    target_name: slack
+    confidence: 0.9
+    reason: "Slack messaging app"
+  
+  discord:
+    target_pm: cask
+    target_name: discord
+    confidence: 0.9
+    reason: "Discord messaging app"
+  
+  spotify:
+    target_pm: cask
+    target_name: spotify
+    confidence: 0.9
+    reason: "Spotify music streaming"
+  
+  firefox:
+    target_pm: cask
+    target_name: firefox
+    confidence: 0.9
+    reason: "Firefox web browser"
+  
+  google-chrome:
+    target_pm: cask
+    target_name: google-chrome
+    confidence: 0.9
+    reason: "Google Chrome web browser"
+  
+  # System utilities
+  htop:
+    target_pm: brew
+    target_name: htop
+    confidence: 0.95
+    reason: "Interactive process viewer"
+  
+  glances:
+    target_pm: brew
+    target_name: glances
+    confidence: 0.9
+    reason: "Cross-platform monitoring tool"
+  
+  # Network tools
+  netcat:
+    target_pm: brew
+    target_name: netcat
+    confidence: 0.9
+    reason: "Netcat networking utility"
+  
+  telnet:
+    target_pm: brew
+    target_name: telnet
+    confidence: 0.9
+    reason: "Telnet client"
+  
+  ssh:
+    target_pm: brew
+    target_name: openssh
+    confidence: 0.9
+    reason: "OpenSSH client and server"
+  
+  # Text processing
+  grep:
+    target_pm: brew
+    target_name: grep
+    confidence: 0.95
+    reason: "GNU grep text search utility"
+  
+  sed:
+    target_pm: brew
+    target_name: gnu-sed
+    confidence: 0.95
+    reason: "GNU sed stream editor"
+  
+  awk:
+    target_pm: brew
+    target_name: gawk
+    confidence: 0.95
+    reason: "GNU awk text processing"
+  
+  # Version control
+  subversion:
+    target_pm: brew
+    target_name: subversion
+    confidence: 0.9
+    reason: "Subversion version control"
+  
+  mercurial:
+    target_pm: brew
+    target_name: mercurial
+    confidence: 0.9
+    reason: "Mercurial version control"
