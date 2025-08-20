@@ -1,0 +1,2211 @@
+{
+  "summary": {
+    "total_items": 165,
+    "auto_percentage": 0.0,
+    "mapped_auto": 0,
+    "mapped_verify": 0,
+    "manual": 165,
+    "skipped": 0
+  },
+  "total_packages": 165,
+  "auto_mapped": 0,
+  "verify_required": 0,
+  "manual_review": 165,
+  "skipped": 0,
+  "mapped_auto": [],
+  "mapped_verify": [],
+  "mapping_results": [
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "apt-transport-https",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "aspell",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "bsdutils",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "build-essential",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ca-certificates",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "colordiff",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "cowsay",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "cuda-repo-wsl-ubuntu-12-6-local",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "curl",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "docker.io",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "dos2unix",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "figlet",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "fortune-mod",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "g++",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "gdb",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "git",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "git-filter-repo",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "gnupg",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "gpg",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "httpie",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "imagemagick",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "init",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "links",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "lolcat",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "lpr",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "make",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ncurses-base",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ncurses-bin",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "nodejs",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "nvidia-utils-535",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "openjdk-11-jre-headless",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-apt",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-distutils",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-pip",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-setuptools",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-venv",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3-wheel",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "python3.12-venv",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "rig",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "rsync",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "sbt",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "sl",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "spell",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "sqlite3",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ssh",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ssh-askpass",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "talk",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "traceroute",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "tree",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "ubuntu-wsl",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "valgrind",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "wdiff",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "wget",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "whois",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "wslu",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "x11-apps",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "xauth",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "apt",
+        "source_name": "xvfb",
+        "version": "",
+        "category": null,
+        "meta": {}
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "annotated-types",
+        "version": "0.7.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "coverage",
+        "version": "7.10.4",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "iniconfig",
+        "version": "2.1.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "markdown-it-py",
+        "version": "4.0.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "mdurl",
+        "version": "0.1.2",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "mypy",
+        "version": "1.17.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "mypy_extensions",
+        "version": "1.1.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "-e git+ssh://git@github.com/ebenshi/packster.git@5e941f6844b425e7734f5ccaa556d7a3feb44393#egg=packster",
+        "version": "",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pathspec",
+        "version": "0.12.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pillow",
+        "version": "11.3.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pluggy",
+        "version": "1.6.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pydantic",
+        "version": "2.11.7",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pydantic_core",
+        "version": "2.33.2",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "Pygments",
+        "version": "2.19.2",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pytest",
+        "version": "8.4.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "pytest-cov",
+        "version": "6.2.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "PyYAML",
+        "version": "6.0.2",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "qrcode",
+        "version": "8.2",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "rich",
+        "version": "14.1.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "ruff",
+        "version": "0.12.9",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "shellingham",
+        "version": "1.5.4",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "typer",
+        "version": "0.16.0",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "typing-inspection",
+        "version": "0.4.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "pip",
+        "source_name": "typing_extensions",
+        "version": "4.14.1",
+        "category": "python",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "abbrev",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "base64",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "benchmark",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "cgi",
+        "version": "default: 0.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "csv",
+        "version": "default: 3.1.9",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "date",
+        "version": "default: 3.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "dbm",
+        "version": "default: 1.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "debug",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "delegate",
+        "version": "default: 0.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "did_you_mean",
+        "version": "default: 1.5.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "digest",
+        "version": "default: 3.0.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "drb",
+        "version": "default: 2.0.4",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "english",
+        "version": "default: 0.7.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "erb",
+        "version": "default: 2.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "etc",
+        "version": "default: 1.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "fcntl",
+        "version": "default: 1.0.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "fiddle",
+        "version": "default: 1.0.6",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "fileutils",
+        "version": "default: 1.5.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "find",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "forwardable",
+        "version": "default: 1.3.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "gdbm",
+        "version": "default: 2.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "getoptlong",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "io-nonblock",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "io-wait",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "ipaddr",
+        "version": "default: 1.2.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "irb",
+        "version": "default: 1.3.5",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "logger",
+        "version": "default: 1.4.3",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "lolcat",
+        "version": "100.0.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "matrix",
+        "version": "default: 0.3.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "mutex_m",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-ftp",
+        "version": "default: 0.1.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-http",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-imap",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-pop",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-protocol",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-smtp",
+        "version": "default: 0.2.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "net-telnet",
+        "version": "0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "nkf",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "observer",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "open-uri",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "open3",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "openssl",
+        "version": "default: 3.0.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "optimist",
+        "version": "3.0.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "optparse",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "ostruct",
+        "version": "default: 0.3.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "paint",
+        "version": "2.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "pathname",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "power_assert",
+        "version": "1.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "pp",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "prettyprint",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "prime",
+        "version": "default: 0.1.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "pstore",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "racc",
+        "version": "default: 1.5.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "rbs",
+        "version": "1.0.4",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "readline",
+        "version": "default: 0.0.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "readline-ext",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "reline",
+        "version": "default: 0.2.5",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "resolv",
+        "version": "default: 0.2.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "resolv-replace",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "rexml",
+        "version": "3.2.5",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "rinda",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "rss",
+        "version": "0.2.9",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "rubygems-update",
+        "version": "3.3.5",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "securerandom",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "set",
+        "version": "default: 1.0.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "shellwords",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "singleton",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "syslog",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "tempfile",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "time",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "timeout",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "tmpdir",
+        "version": "default: 0.1.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "tracer",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "tsort",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "typeprof",
+        "version": "0.12.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "un",
+        "version": "default: 0.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "uri",
+        "version": "default: 0.10.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "weakref",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "webrick",
+        "version": "1.7.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "xmlrpc",
+        "version": "0.3.2",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "yaml",
+        "version": "default: 0.1.1",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    },
+    {
+      "source": {
+        "source_pm": "gem",
+        "source_name": "zlib",
+        "version": "default: 1.1.0",
+        "category": "ruby",
+        "meta": {
+          "scope": "global"
+        }
+      },
+      "candidate": null,
+      "decision": "manual",
+      "notes": null
+    }
+  ]
+}

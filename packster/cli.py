@@ -20,6 +20,17 @@ from .emit import (
     write_bootstrap_script,
     write_reports,
 )
+from .cloud import (
+    create_migration_archive,
+    upload_migration_archive,
+    generate_download_command,
+    generate_simple_download_command,
+    generate_robust_download_command,
+    generate_download_script,
+    validate_github_token,
+    generate_download_qr,
+    open_download_page,
+)
 from .types import Report, Decision
 from .config import DEFAULT_REGISTRY_PATH, CONSOLE_STYLES
 
@@ -143,6 +154,11 @@ def generate(
     no_verify: bool = typer.Option(False, "--no-verify", help="Skip Homebrew validation"),
     format_type: str = typer.Option("json", "--format", "-f", help="Report format (json/yaml)"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
+    upload: bool = typer.Option(False, "--upload", "-u", help="Upload to cloud storage"),
+    github_token: Optional[str] = typer.Option(None, "--github-token", envvar="GITHUB_TOKEN", help="GitHub personal access token"),
+    description: Optional[str] = typer.Option(None, "--description", "-d", help="Description for cloud upload"),
+    web: bool = typer.Option(False, "--web", "-w", help="Start web server for easy access"),
+    qr: bool = typer.Option(False, "--qr", help="Generate QR code for download command"),
 ) -> None:
     """Generate migration files for the target platform."""
     setup_logging(verbose)
@@ -248,6 +264,43 @@ def generate(
         except Exception as e:
             console.print(f"[red]Error generating output files: {e}[/red]")
             sys.exit(1)
+        
+        # Cloud upload functionality
+        if upload:
+            # Validate GitHub token
+            if not github_token:
+                console.print("[red]Error: GitHub token required for cloud upload. Set GITHUB_TOKEN environment variable or use --github-token.[/red]")
+                console.print("[yellow]You can create a GitHub personal access token at: https://github.com/settings/tokens[/yellow]")
+                sys.exit(1)
+            
+            # Validate token
+            task = progress.add_task("Validating GitHub token...", total=None)
+            if not validate_github_token(github_token):
+                console.print("[red]Error: Invalid GitHub token. Please check your token and try again.[/red]")
+                sys.exit(1)
+            progress.update(task, description="GitHub token validated")
+            
+            # Create compressed archive
+            task = progress.add_task("Creating migration archive...", total=None)
+            try:
+                archive_path = create_migration_archive(out)
+                progress.update(task, description=f"Created archive: {archive_path.name}")
+            except Exception as e:
+                console.print(f"[red]Error creating archive: {e}[/red]")
+                sys.exit(1)
+            
+            # Upload to cloud
+            task = progress.add_task("Uploading to GitHub Gist...", total=None)
+            try:
+                upload_result = upload_migration_archive(
+                    archive_path=archive_path,
+                    github_token=github_token,
+                    description=description or f"Packster Migration - {target}"
+                )
+                progress.update(task, description="Upload completed successfully")
+            except Exception as e:
+                console.print(f"[red]Error uploading to cloud: {e}[/red]")
+                sys.exit(1)
     
     # Print statistics
     console.print("\n[bold cyan]Package Collection Summary:[/bold cyan]")
@@ -278,10 +331,102 @@ def generate(
     
     console.print(files_table)
     
-    console.print(f"\n[bold]Next steps:[/bold]")
-    console.print(f"1. Review the generated files")
-    console.print(f"2. Run: cd {out} && ./bootstrap.sh")
-    console.print(f"3. Check report.html for detailed information")
+    # Handle upload results
+    if upload:
+        # Display upload results
+        console.print(f"\n[bold green]✅ Migration uploaded successfully![/bold green]")
+        
+        upload_table = Table(title="Upload Information", show_header=True, header_style="bold magenta")
+        upload_table.add_column("Property", style="cyan")
+        upload_table.add_column("Value", style="green")
+        
+        upload_table.add_row("Gist ID", upload_result["gist_id"])
+        upload_table.add_row("File Size", f"{upload_result['file_size']:,} bytes")
+        upload_table.add_row("Expires At", upload_result["expires_at"])
+        upload_table.add_row("Download URL", upload_result["download_url"])
+        
+        console.print(upload_table)
+        
+        # Generate download commands
+        download_command = generate_download_command(
+            upload_result["download_url"], 
+            upload_result["file_name"]
+        )
+        simple_command = generate_simple_download_command(
+            upload_result["download_url"], 
+            upload_result["file_name"]
+        )
+        robust_command = generate_robust_download_command(
+            upload_result["download_url"], 
+            upload_result["file_name"]
+        )
+        
+        # Generate download script
+        script_path = generate_download_script(
+            upload_result["download_url"], 
+            upload_result["file_name"],
+            out / f"install-{upload_result['file_name'].replace('.tar.gz', '')}.sh"
+        )
+        
+        console.print(f"\n[bold]📥 Download on Mac with:[/bold]")
+        console.print(f"[code]{download_command}[/code]")
+        
+        console.print(f"\n[bold]💡 Or use this simple command:[/bold]")
+        console.print(f"[code]{simple_command}[/code]")
+        console.print(f"[dim]Copy and paste this single command into your Mac terminal[/dim]")
+        
+        console.print(f"\n[bold]📄 Alternative: Create installer script (recommended for email):[/bold]")
+        console.print(f"[code]curl -L '{upload_result['download_url']}' | tar -xz && cd {upload_result['file_name'].replace('.tar.gz', '')} && echo '#!/bin/bash' > install.sh && echo 'curl -L \"{upload_result['download_url']}\" | tar -xz' >> install.sh && echo 'cd {upload_result['file_name'].replace('.tar.gz', '')}' >> install.sh && echo 'bash bootstrap.sh/bootstrap.sh' >> install.sh && chmod +x install.sh && ./install.sh[/code]")
+        console.print(f"[dim]This creates a local installer script that avoids copy/paste issues[/dim]")
+        console.print(f"[dim]Use this if the URL gets broken when copying from email[/dim]")
+        
+        console.print(f"\n[bold]📜 Download script generated:[/bold] {script_path}")
+        console.print(f"[dim]Share this script file instead of copying commands[/dim]")
+        console.print(f"[dim]On Mac, run: chmod +x '{script_path}' && ./'{script_path}'[/dim]")
+        
+        # Generate QR code if requested
+        if qr:
+            try:
+                qr_path = generate_download_qr(
+                    upload_result["download_url"],
+                    upload_result["file_name"],
+                    out / "packster-download-qr.png"
+                )
+                console.print(f"\n[bold]📱 QR Code generated:[/bold] {qr_path}")
+                console.print(f"[dim]Scan this QR code to get the download URL[/dim]")
+                console.print(f"[dim]Then use: curl -L \"URL\" | tar -xz && cd {upload_result['file_name'].replace('.tar.gz', '')} && ./bootstrap.sh/bootstrap.sh[/dim]")
+            except ImportError:
+                console.print(f"\n[yellow]⚠️  QR code generation requires 'qrcode' package. Install with: pip install qrcode[pil][/yellow]")
+            except Exception as e:
+                console.print(f"\n[yellow]⚠️  QR code generation failed: {e}[/yellow]")
+        
+        # Start web server if requested
+        if web:
+            try:
+                web_url = open_download_page(upload_result)
+                console.print(f"\n[bold]🌐 Web interface available at:[/bold] {web_url}")
+                console.print(f"[dim]Open this URL on any device to access the download command[/dim]")
+            except Exception as e:
+                console.print(f"\n[yellow]⚠️  Web server failed to start: {e}[/yellow]")
+        
+        console.print(f"\n[bold]Next steps:[/bold]")
+        console.print(f"1. Copy the download command above (try the email-safe version if others fail)")
+        console.print(f"   OR share the generated script file (recommended for email)")
+        if qr:
+            console.print(f"   OR scan the QR code with your phone")
+        if web:
+            console.print(f"   OR visit the web interface")
+        console.print(f"2. Paste it into your Mac terminal")
+        console.print(f"3. The migration will install automatically")
+        console.print(f"4. Check report.html for detailed information")
+        console.print(f"\n[dim]💡 Tip: If you get 'curl: no URL specified' errors, use the email-safe command or share the script file[/dim]")
+        
+    else:
+        console.print(f"\n[bold]Next steps:[/bold]")
+        console.print(f"1. Review the generated files")
+        console.print(f"2. Run: cd {out} && ./bootstrap.sh")
+        console.print(f"3. Check report.html for detailed information")
+        console.print(f"\n[dim]💡 Tip: Use --upload to share your migration via cloud storage[/dim]")
 
 
 @app.command()

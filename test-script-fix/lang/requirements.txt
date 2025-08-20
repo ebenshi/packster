@@ -1,0 +1,24 @@
+-e git+ssh://git@github.com/ebenshi/packster.git@5e941f6844b425e7734f5ccaa556d7a3feb44393#egg=packster
+annotated-types==0.7.0
+coverage==7.10.4
+iniconfig==2.1.0
+markdown-it-py==4.0.0
+mdurl==0.1.2
+mypy==1.17.1
+mypy_extensions==1.1.0
+pathspec==0.12.1
+pillow==11.3.0
+pluggy==1.6.0
+pydantic==2.11.7
+pydantic_core==2.33.2
+Pygments==2.19.2
+pytest==8.4.1
+pytest-cov==6.2.1
+PyYAML==6.0.2
+qrcode==8.2
+rich==14.1.0
+ruff==0.12.9
+shellingham==1.5.4
+typer==0.16.0
+typing-inspection==0.4.1
+typing_extensions==4.14.1

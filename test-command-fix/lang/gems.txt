@@ -1,0 +1,82 @@
+abbrev -v default: 0.1.0
+base64 -v default: 0.1.0
+benchmark -v default: 0.1.1
+cgi -v default: 0.2.0
+csv -v default: 3.1.9
+date -v default: 3.1.0
+dbm -v default: 1.1.0
+debug -v default: 0.1.0
+delegate -v default: 0.2.0
+did_you_mean -v default: 1.5.0
+digest -v default: 3.0.0
+drb -v default: 2.0.4
+english -v default: 0.7.1
+erb -v default: 2.2.0
+etc -v default: 1.2.0
+fcntl -v default: 1.0.0
+fiddle -v default: 1.0.6
+fileutils -v default: 1.5.0
+find -v default: 0.1.0
+forwardable -v default: 1.3.2
+gdbm -v default: 2.1.0
+getoptlong -v default: 0.1.1
+io-nonblock -v default: 0.1.0
+io-wait -v default: 0.1.0
+ipaddr -v default: 1.2.2
+irb -v default: 1.3.5
+logger -v default: 1.4.3
+lolcat -v 100.0.1
+matrix -v default: 0.3.1
+mutex_m -v default: 0.1.1
+net-ftp -v default: 0.1.2
+net-http -v default: 0.1.1
+net-imap -v default: 0.1.1
+net-pop -v default: 0.1.1
+net-protocol -v default: 0.1.0
+net-smtp -v default: 0.2.1
+net-telnet -v 0.1.1
+nkf -v default: 0.1.0
+observer -v default: 0.1.1
+open-uri -v default: 0.1.0
+open3 -v default: 0.1.1
+openssl -v default: 3.0.0
+optimist -v 3.0.0
+optparse -v default: 0.1.0
+ostruct -v default: 0.3.1
+paint -v 2.2.0
+pathname -v default: 0.1.0
+power_assert -v 1.2.0
+pp -v default: 0.1.0
+prettyprint -v default: 0.1.0
+prime -v default: 0.1.2
+pstore -v default: 0.1.1
+racc -v default: 1.5.1
+rbs -v 1.0.4
+readline -v default: 0.0.2
+readline-ext -v default: 0.1.1
+reline -v default: 0.2.5
+resolv -v default: 0.2.0
+resolv-replace -v default: 0.1.0
+rexml -v 3.2.5
+rinda -v default: 0.1.0
+rss -v 0.2.9
+rubygems-update -v 3.3.5
+securerandom -v default: 0.1.0
+set -v default: 1.0.1
+shellwords -v default: 0.1.0
+singleton -v default: 0.1.1
+syslog -v default: 0.1.0
+tempfile -v default: 0.1.1
+time -v default: 0.1.0
+timeout -v default: 0.1.1
+tmpdir -v default: 0.1.2
+tracer -v default: 0.1.1
+tsort -v default: 0.1.0
+typeprof -v 0.12.0
+un -v default: 0.1.0
+uri -v default: 0.10.1
+weakref -v default: 0.1.1
+webrick -v 1.7.0
+xmlrpc -v 0.3.2
+yaml -v default: 0.1.1
+zlib -v default: 1.1.0
