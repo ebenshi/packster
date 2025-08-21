@@ -20,6 +20,8 @@ from .emit import (
     write_bootstrap_script,
     write_reports,
 )
+# Cloud functionality removed - focusing on core migration features
+from .llm import ClaudeMigrator
 from .types import Report, Decision
 from .config import DEFAULT_REGISTRY_PATH, CONSOLE_STYLES
 
@@ -34,7 +36,7 @@ app = typer.Typer(
 @property
 def commands(self):
     """Get available commands for testing."""
-    return ["generate", "info", "version"]
+    return ["generate", "llm_migrate", "info", "version"]
 
 app.commands = commands.__get__(app)
 
@@ -142,7 +144,11 @@ def generate(
     registry: Optional[Path] = typer.Option(None, "--registry", "-r", help="Custom registry file"),
     no_verify: bool = typer.Option(False, "--no-verify", help="Skip Homebrew validation"),
     format_type: str = typer.Option("json", "--format", "-f", help="Report format (json/yaml)"),
+    llm_migrate: bool = typer.Option(False, "--llm-migrate", "-l", help="Automatically run LLM migration after generation"),
+    api_key: Optional[str] = typer.Option(None, "--api-key", "-k", help="Claude API key (required if --llm-migrate is used)"),
+    llm_batch_size: int = typer.Option(50, "--llm-batch-size", help="Number of packages to process per batch in LLM migration"),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Verbose output"),
+         # Cloud upload options removed - focusing on core migration features
 ) -> None:
     """Generate migration files for the target platform."""
     setup_logging(verbose)
@@ -248,6 +254,8 @@ def generate(
         except Exception as e:
             console.print(f"[red]Error generating output files: {e}[/red]")
             sys.exit(1)
+        
+        # Cloud upload functionality removed - focusing on core migration features
     
     # Print statistics
     console.print("\n[bold cyan]Package Collection Summary:[/bold cyan]")
@@ -278,10 +286,175 @@ def generate(
     
     console.print(files_table)
     
+    # Handle LLM migration if requested
+    if llm_migrate:
+        if not api_key:
+            console.print(f"\n[red]❌ API key required for LLM migration[/red]")
+            console.print(f"[yellow]💡 Use --api-key or run 'packster llm-migrate' separately[/yellow]")
+        else:
+            console.print(f"\n[bold cyan]🤖 Starting LLM-powered migration...[/bold cyan]")
+            
+            try:
+                # Initialize Claude migrator
+                migrator = ClaudeMigrator(api_key)
+                
+                # Convert MappingResult objects to dictionaries for LLM migration
+                packages_for_llm = []
+                for result in mapping_results:
+                    package_dict = {
+                        "source": {
+                            "source_pm": result.source.source_pm.value,
+                            "source_name": result.source.source_name,
+                            "source_version": result.source.version
+                        },
+                        "candidate": {
+                            "target_pm": result.candidate.target_pm if result.candidate else None,
+                            "target_name": result.candidate.target_name if result.candidate else None,
+                            "target_version": None  # Candidate doesn't have version field
+                        },
+                        "decision": result.decision.value,
+                        "notes": result.notes
+                    }
+                    packages_for_llm.append(package_dict)
+                
+                # Perform LLM migration
+                with console.status(f"[bold green]🤖 Analyzing {len(packages_for_llm)} packages with Claude AI...", spinner="dots"):
+                    llm_results = migrator.migrate_packages(packages_for_llm, out, "llm-migration", llm_batch_size)
+                
+                if llm_results["success"]:
+                    llm_summary = llm_results["summary"]
+                    console.print(f"\n[bold green]✅ LLM Migration completed![/bold green]")
+                    console.print(f"[green]📊 LLM Summary:[/green]")
+                    console.print(f"  • Installable: {llm_summary['installable_count']}")
+                    console.print(f"  • Unavailable: {llm_summary['unavailable_count']}")
+                    console.print(f"  • Success rate: {llm_summary['success_rate']:.1f}%")
+                    
+                    # Show LLM-generated files
+                    if llm_results["saved_files"]:
+                        console.print(f"\n[green]🤖 LLM-generated files:[/green]")
+                        for file_type, file_path in llm_results["saved_files"].items():
+                            console.print(f"  • {file_type}: {file_path}")
+                    
+                    # Show the LLM installation script
+                    if "installation_script" in llm_results["saved_files"]:
+                        script_path = llm_results["saved_files"]["installation_script"]
+                        console.print(f"\n[bold]🚀 AI-generated installation script:[/bold]")
+                        console.print(f"[code]{script_path}[/code]")
+                        console.print(f"[dim]Copy this script to your Mac and run: chmod +x {script_path.name} && ./{script_path.name}[/dim]")
+                else:
+                    console.print(f"\n[red]❌ LLM migration failed: {llm_results['error']}[/red]")
+                    
+            except Exception as e:
+                console.print(f"\n[red]❌ LLM migration error: {e}[/red]")
+    
+    # Print next steps
     console.print(f"\n[bold]Next steps:[/bold]")
     console.print(f"1. Review the generated files")
     console.print(f"2. Run: cd {out} && ./bootstrap.sh")
     console.print(f"3. Check report.html for detailed information")
+    
+    if llm_migrate and api_key:
+        console.print(f"4. Use the AI-generated installation script for macOS migration")
+    else:
+        console.print(f"\n[dim]💡 Tip: Use 'packster generate --llm-migrate --api-key YOUR_KEY' for AI-powered migration[/dim]")
+
+
+@app.command()
+def llm_migrate(
+    api_key: str = typer.Option(..., "--api-key", "-k", help="Claude API key"),
+    report_path: Path = typer.Option("./packster-out/report.json", "--report", "-r", help="Path to report.json file"),
+    output: Path = typer.Option("./packster-out", "--output", "-o", help="Output directory for migration files"),
+    model: str = typer.Option("claude-3-5-sonnet-20241022", "--model", "-m", help="Claude model to use"),
+    batch_size: int = typer.Option(50, "--batch-size", "-b", help="Number of packages to process per batch"),
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="Enable verbose logging"),
+) -> None:
+    """Generate macOS installation commands using Claude AI."""
+    setup_logging(verbose)
+    print_banner()
+    
+    console.print("[bold cyan]🤖 LLM-Powered Package Migration[/bold cyan]")
+    console.print("[dim]Using Claude AI to intelligently map packages to macOS[/dim]\n")
+    
+    # Check if report file exists
+    if not report_path.exists():
+        console.print(f"[red]❌ Report file not found: {report_path}[/red]")
+        console.print("[yellow]💡 Run 'packster generate' first to create a report[/yellow]")
+        raise typer.Exit(1)
+    
+    # Load the report
+    try:
+        import json
+        with open(report_path, 'r') as f:
+            report_data = json.load(f)
+        
+        # Extract packages from the report
+        packages = report_data.get("mapping_results", [])
+        if not packages:
+            console.print("[red]❌ No packages found in report[/red]")
+            raise typer.Exit(1)
+        
+        console.print(f"[green]📦 Found {len(packages)} packages to analyze[/green]\n")
+        
+    except Exception as e:
+        console.print(f"[red]❌ Failed to load report: {e}[/red]")
+        raise typer.Exit(1)
+    
+    # Initialize Claude migrator
+    try:
+        migrator = ClaudeMigrator(api_key, model)
+        console.print(f"[green]✅ Connected to Claude AI (model: {model})[/green]\n")
+    except Exception as e:
+        console.print(f"[red]❌ Failed to initialize Claude migrator: {e}[/red]")
+        raise typer.Exit(1)
+    
+    # Perform migration
+    with console.status(f"[bold green]🤖 Analyzing {len(packages)} packages with Claude AI (batch size: {batch_size})...", spinner="dots"):
+        results = migrator.migrate_packages(packages, output, "llm-migration", batch_size)
+    
+    if not results["success"]:
+        console.print(f"[red]❌ Migration failed: {results['error']}[/red]")
+        raise typer.Exit(1)
+    
+    # Display results
+    summary = results["summary"]
+    console.print(f"\n[bold green]✅ Migration completed successfully![/bold green]")
+    console.print(f"[green]📊 Summary:[/green]")
+    console.print(f"  • Total packages: {summary['total_packages']}")
+    console.print(f"  • Installable: {summary['installable_count']}")
+    console.print(f"  • Unavailable: {summary['unavailable_count']}")
+    console.print(f"  • Success rate: {summary['success_rate']:.1f}%")
+    
+    # Show installation methods
+    if summary.get("installation_methods"):
+        console.print(f"\n[green]📦 Installation methods:[/green]")
+        for method, count in summary["installation_methods"].items():
+            console.print(f"  • {method}: {count} packages")
+    
+    # Show saved files
+    if results["saved_files"]:
+        console.print(f"\n[green]📁 Generated files:[/green]")
+        for file_type, file_path in results["saved_files"].items():
+            console.print(f"  • {file_type}: {file_path}")
+    
+    # Show the installation script
+    if "installation_script" in results["saved_files"]:
+        script_path = results["saved_files"]["installation_script"]
+        console.print(f"\n[bold]🚀 Ready-to-run installation script:[/bold]")
+        console.print(f"[code]{script_path}[/code]")
+        console.print(f"[dim]Copy this script to your Mac and run: chmod +x {script_path.name} && ./{script_path.name}[/dim]")
+    
+    # Show unavailable packages report
+    if "unavailable_report" in results["saved_files"]:
+        report_path = results["saved_files"]["unavailable_report"]
+        console.print(f"\n[bold]📋 Unavailable packages report:[/bold]")
+        console.print(f"[code]{report_path}[/code]")
+        console.print(f"[dim]Review this file for packages that couldn't be migrated[/dim]")
+    
+    console.print(f"\n[bold]Next steps:[/bold]")
+    console.print(f"1. Copy the installation script to your Mac")
+    console.print(f"2. Make it executable: chmod +x {script_path.name if 'installation_script' in results['saved_files'] else 'script.sh'}")
+    console.print(f"3. Run it: ./{script_path.name if 'installation_script' in results['saved_files'] else 'script.sh'}")
+    console.print(f"4. Review the unavailable packages report for manual steps")
 
 
 @app.command()
